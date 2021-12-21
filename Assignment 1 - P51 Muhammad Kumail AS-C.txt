@@ -1,0 +1,57 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q5) Find the count of vowels characters in an entered string separately.
+
+
+-----Pseudocode-----
+ 
+Declare string as string 
+Declare i as integer
+Declare eachchar as char
+Declare vowela as integer
+Declare vowele as integer
+Declare voweli as integer
+Declare vowelo as integer
+Declare vowelu as integer
+Declare totalvowels as integer
+
+string ← ""
+i ← 0 
+eachchar ← ''
+vowela ← 0
+vowele ← 0
+voweli ← 0
+vowelo ← 0
+vowelu← 0
+totalvowels ← 0
+
+input ("Enter String: ",string)
+string ← LOWER(string)
+
+For i ← 1 to len(string) 
+	eachchar ← MID (string ,i , 1)
+	if eachchar = "a" then
+		vowela = vowela + 1
+	elseif eachchar = "e" then 
+		vowele = vowele + 1 
+	elseif eachchar = "i" then 
+		voweli = voweli + 1
+	elseif eachchar = "o" then 
+		vowelo = vowelo + 1 
+	elseif eachchar = "u" then 
+		vowelu = vowelu + 1
+	endif
+next i
+
+totalvowels ← vowela + vowele + voweli + vowelo + vowelu
+
+output ("number of a:", vowela)
+output ("number of e:", vowele)
+output ("number of i:", voweli)
+output ("number of o:", vowelo)
+output ("number of u:", vowelu)
+outpuut("number of total vowels: ",totalvowels)
+	
+
+

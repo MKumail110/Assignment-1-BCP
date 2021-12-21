@@ -1,0 +1,70 @@
+BCP ASsignment:
+Muhammad Kumail - AS-C
+
+Q3) Count and output the NUMBER of an entered character in a string. Also output separate counts for alphabets (cap & small together; cASe neutral), digits and other characters in same entered string. 
+
+
+
+------VB-------
+
+Module Module1
+
+    Sub Main()
+        
+ Dim tchar AS Integer
+        Dim talpha AS Integer
+        Dim tdigit AS Integer
+        Dim digits AS String
+        Dim extrachar AS Integer
+        Dim str1 AS String
+        Dim chartocount AS Char
+        Dim eachchar AS Char
+        Dim alphabets AS String
+       
+        str1 = ""
+        chartocount = ""
+        eachchar = ""
+        alphabets = "abcdefghijklmnopqrstuvwxyz"
+        tchar = 0
+        talpha = 0
+        tdigit = 0
+        digits = "0123456789"
+        extrachar = 0
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine
+        str1 = LCASe(str1)
+
+        Console.Write("Enter character to count: ")
+        chartocount = Console.ReadLine
+
+        For i = 1 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            If eachchar = chartocount Then
+                tchar = tchar + 1
+            End If
+
+            If InStr(alphabets, eachchar) > 0 Then
+                talpha = (talpha + 1)
+            ElseIf InStr(digits, eachchar) > 0 Then
+                tdigit = tdigit + 1
+            End If
+        Next
+
+        extrachar = Len(str1) - (tdigit + talpha)
+
+        Console.WriteLine("Given character count: " & tchar)
+        Console.WriteLine("Total alphabets: " & talpha)
+        Console.WriteLine("Total digits: " & tdigit)
+        Console.WriteLine("Other characters: " & extrachar)
+
+        Console.ReadKey()
+    End Sub
+
+End Module
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q9-
+MixUp:
+Given strings a and b, return a single string with a and b separated
+by a space '<a> <b>', except swap the first 2 chars of each string.
+e.g.
+  'mix', pod' -> 'pox mid'
+  'dog', 'dinner' -> 'dig donner'
+  Assume a and b are length 2 or more.
+
+
+-----Pseudocode------
+
+Declare stra as string
+Declare strb as string 
+Declare str2a as string 
+Declare str2b as string 
+Declare finalstr as string 
+
+stra ← ""
+strb ← ""
+str2a ← ""
+str2b ← ""
+finalstr ← ""
+
+input ("Enter string a : ", stra ) 
+input ("Enter string b : ", strb )
+
+str2a ← left (stra , 2)
+str2b ← left (strb , 2)
+
+finalstr ← str2b & RIGHT (stra , len(stra)- 2) & " " & str2a & RIGHT (strb , len(strb) - 2)
+
+output Finalstr
+

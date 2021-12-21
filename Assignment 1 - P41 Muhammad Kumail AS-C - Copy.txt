@@ -1,0 +1,46 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q4- Find the character that appears most number of times in an entered string and output it.
+
+----Pseudocode----
+
+Declare string1 as string 
+Declare i as integer 
+Declare char as char
+Declare y as integer
+Declare char2 as char 
+Declare charcount as integer
+Declare maxcharvalue as integer
+Declare maxchar as char
+
+string1 ← ""
+i ← 0
+char ← ''
+y ← 0
+char2 ← ''
+charcount ← 0
+maxcharvalue ← 0
+maxchar ← ''
+
+input "Enter String: ", string1
+
+For i ← 1 to len(string1)
+	char ← MID (string1 ,i, 1)
+	
+	For y ← 1 to len(string1) 
+		char2 ← MID (string1 ,y, 1) 
+		if char = char2 then 
+			charcount ← charcount + 1
+		endif  
+		if charcount > maxcharvalue then 
+			maxcharvalue ← charcount 
+			maxchar ← char
+		endif
+	Next y
+	charcount ← 0	
+Next i	
+
+output ("The most repeated character is ", maxchar)
+output ("Additional times repeated: ", maxcharvalue)
+

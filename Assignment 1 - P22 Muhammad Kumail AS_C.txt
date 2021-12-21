@@ -1,0 +1,46 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q2- Replace selected character with another in entered string.
+
+-----VB-----
+	
+
+Module Module1
+
+    Sub Main()
+        Dim char1 As Char
+        Dim i As Integer
+        Dim eachchar As Char
+        Dim str1 As String
+        Dim chartoc AS Char
+        
+        str1 = ""
+        chartoc = ""
+        char1 = ""
+        i = 0
+        eachchar = ""
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine()
+
+        Console.Write("Enter Character to replace: ")
+        chartoc = Console.ReadLine()
+
+        Console.Write("Enter character to replace with: ")
+        char1 = Console.ReadLine()
+
+        For i = 1 To Len(str1)
+            eachchar = Mid(str1, i, 1)
+            If eachchar = chartoc Then
+                str1 = Mid(str1, 1, i - 1) & char1 & Mid(str1, i + 1, Len(str1))
+            End If
+        Next
+
+        Console.Write(str1)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module

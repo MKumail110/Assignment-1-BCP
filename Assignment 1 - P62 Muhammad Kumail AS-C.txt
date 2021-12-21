@@ -1,0 +1,31 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q6-INPUT an INT count of a number of donuts, OUTPUT a string of the form 'Number of donuts: <count>', where <count> is the number
+input. However, if the count is 10 or more, then use the word 'many'instead of the actual count.So donuts(5) outputs 'Number of donuts: 5'
+and donuts(23) outputs 'Number of donuts: many'
+
+------VB-----
+
+Module Module1
+
+    Sub Main()
+        
+        Dim donutqty As Integer
+
+        donutqty = 0
+
+        Console.Write("Enter donuts : ")
+        donutqty = Console.ReadLine()
+
+        If donutqty < 10 Then
+            Console.WriteLine("Number of donuts: " & donutqty)
+        ElseIf donutqty >= 10 Then
+            Console.WriteLine("Number of donuts: many")
+        End If
+
+        Console.ReadKey()
+     
+    End Sub
+
+End Module

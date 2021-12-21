@@ -1,0 +1,21 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q6-INPUT an INT count of a number of donuts, OUTPUT a string of the form 'Number of donuts: <count>', where <count> is the number
+input. However, if the count is 10 or more, then use the word 'many'instead of the actual count.So donuts(5) outputs 'Number of donuts: 5'
+and donuts(23) outputs 'Number of donuts: many'
+
+----Pseudocode-----
+
+declare donutqty as integer
+ 
+donutqty ← 0
+
+input ("Enter donuts : ", donutqty)
+
+if donutqty < 10 then 
+	output ("Number of donuts: ", donutqty)
+elseif donutqty >= 10 then 
+	output ("Number of donuts : many")
+endif 
+

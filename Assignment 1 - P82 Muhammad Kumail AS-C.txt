@@ -1,0 +1,56 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q8)
+
+Declare string as string 
+Declare i as integer 
+Declare eachchar as char
+
+string ← ""
+i ← 0
+eachchar ← ''
+
+input ("Enter String: ", string )
+
+For i ← 2 to len(string) 
+	eachchar = MID (string, i ,1)
+	if MID(string, 1 ,1) = eachchar
+		string = MID (string, 1, i-1) & "*" & MID (string, i+1 , len(string)) 
+	End if
+Next
+
+Output string	
+
+-----VB------
+
+Module Module1
+
+    Sub Main()
+       
+        Dim string As String
+        Dim i As Integer
+        Dim eachchar As Char
+
+           string = ""
+        i = 0
+        eachchar = ""
+
+        Console.Write("Enter String: ")
+        string = Console.ReadLine()
+
+        For i = 2 To Len(string)
+            eachchar = Mid(string, i, 1)
+            If Mid(string, 1, 1) = eachchar then
+                string = Mid(string, 1, i - 1) & "*" & Mid(string, i + 1, Len(string))
+            End If
+
+        Next
+        Console.WriteLine(string)
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+		

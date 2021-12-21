@@ -1,0 +1,61 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q4- Find the character that appears most number of times in an entered string and output it.
+
+
+-----VB-----
+
+Module Module1
+
+    Sub Main()
+        Dim string1 As String
+        Dim i As Integer
+        Dim char As Char
+        Dim y As Integer
+        Dim char2 As Char
+        Dim charcount As Integer
+        Dim maxcharvalue As Integer
+        Dim maxchar As Char
+
+        string1 = ""
+        i = 0
+        char = ""
+        y = 0
+        char2 = ""
+        charcount = 0
+        maxcharvalue = 0
+        maxchar = ""
+
+        Console.Write("Enter String: ")
+        string1 = Console.ReadLine()
+
+        For i = 1 To Len(string1)
+            char = Mid(string1, i, 1)
+            For y = 1 To Len(string1)
+                char2 = Mid(string1, y, 1)
+                If char = char2 Then
+                    charcount = charcount + 1
+                End If
+                If charcount > maxcharvalue Then
+                    maxcharvalue = charcount
+                    maxchar = char
+                End If
+            Next
+            charcount = 0
+        Next
+
+        Console.WriteLine("The most repeated character is " & maxchar)
+        Console.WriteLine("Additional times repeated: " & maxcharvalue)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module
+
+
+
+
+
+

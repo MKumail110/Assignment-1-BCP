@@ -1,0 +1,31 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q7)both_ends:Input a string s, output a string made of the first 2 and the last 2 chars of the original string,so 'spring' yields 'spng'. However, if the string length
+is less than 2, return string s instead the empty string.
+	 
+----VB----
+	
+Module Module1
+
+    Sub Main()
+        Dim string As String
+        Dim estring As String
+
+        string = ""
+        estring = ""
+
+        Console.Write("Enter string to edit: ")
+        string = Console.ReadLine()
+
+        If Len(string) > 2 Then
+            estring = Left(string, 2) & Right(string, 2)
+            Console.WriteLine(estring)
+        Else
+            Console.WriteLine(string)
+        End If
+        Console.ReadKey()
+    End Sub
+
+End Module
+		

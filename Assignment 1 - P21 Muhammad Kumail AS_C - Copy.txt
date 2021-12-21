@@ -1,0 +1,33 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q2- Replace selected character with another in entered string.
+
+-----Pseudocode-----
+
+Declare string1 AS string
+Declare i AS integer
+Declare eachchar AS char
+Declare chartoc AS char
+Declare char1 AS char
+
+str1 ← ""
+chartochange ← ''
+char1 ← ''
+i ← 0
+eachchar ← ''
+
+input "Enter String: ", str1
+input "Enter character to replace: ", chartoc
+input "Enter character to replace with: ", char1
+
+For i ← 1 to len(str1)
+	eachchar ← MID (str1 ,i, 1)
+	if eachchar = chartoc then
+		str1 ← MID (str1 ,1, i-1) + char1 + MID (str1 ,i+1, len(str1))
+	endif
+Next i 
+
+output str1
+		
+	 

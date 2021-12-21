@@ -1,0 +1,24 @@
+BCP Assignment:
+Muhammad Kumail - AS-C
+
+Q7)both_ends:Input a string s, output a string made of the first 2 and the last 2 chars of the original string,so 'spring' yields 'spng'. However, if the string length
+is less than 2, return string s instead the empty string.
+
+-----Pseudocode-----
+Declare string as string 
+Declare estring as string 
+
+string ← ""
+estring ← ""
+
+input "Enter String to edit: ", string 
+
+If len(string) > 2 then 
+	estring ← left (string,2) & right (string,2) 
+	output estring
+else
+	output string
+endif
+
+		
+	 
